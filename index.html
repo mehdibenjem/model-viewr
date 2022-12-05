@@ -148,20 +148,7 @@
 
 <body>
     <div style="height: 100vh;" id="webXR">
-        <model-viewer src="./public/gateau.glb" poster="./public/gateau.webp" shadow-intensity="1" ar camera-controls ar-placement="wall"
-            touch-action="pan-y" alt="A 3D model carousel">
-
-            <div class="slider">
-                <div class="slides">
-                    <button class="slide selected" onclick="switchSrc(this, 'gateau')"
-                        style="background-image: url('./public/gateau.webp');">
-                    </button>
-                    <button class="slide" onclick="switchSrc(this, 'tacos')"
-                        style="background-image: url('./public/tacos.glb');">
-                    </button>
-                </div>
-            </div>
-        </model-viewer>
+       <model-viewer src="./public/gateau.glb" ar ar-placement="wall" camera-controls touch-action="pan-y" alt="A 3D model of some wall art"></model-viewer>
     </div>
     <script type="module">
         const modelViewer = document.querySelector("model-viewer");
