@@ -149,7 +149,7 @@
 
 <body>
     <div style="height: 100vh;" id="webXR">
-     <model-viewer src="./public/gateau/Chair.glb" poster="./public/gateau.webp" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
+     <model-viewer shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
     View in your space
@@ -177,7 +177,7 @@
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, name) => {
-    const base = "../../assets/ShopifyModels/" + name;
+    const base = "./public/" + name;
     modelViewer.src = base + '.glb';
     modelViewer.poster = base + '.webp';
     const slides = document.querySelectorAll(".slide");
