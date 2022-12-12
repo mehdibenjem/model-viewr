@@ -15,7 +15,8 @@
         }
 
         model-viewer {
-            background-color: #eee;
+            background-image: url('./public/background.png');
+            background-size = 100% 102% ;
             overflow-x: hidden;
             height: 700px;
         }
@@ -148,8 +149,8 @@
 
 <body>
     <div style="height: 100vh;" id="webXR">
-        <model-viewer src="./public/gateau.glb" poster="./public/gateau.webp" shadow-intensity="1" ar camera-controls
-            touch-action="pan-y" alt="A 3D model carousel">
+        <model-viewer shadow-intensity="1" ar ar-modes="scene-viewer webxr" environment-image="legacy" camera-controls
+            touch-action="none" alt="A 3D model carousel">
 
             <div class="slider">
                 <div class="slides">
