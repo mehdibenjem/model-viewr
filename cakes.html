@@ -15,10 +15,13 @@
         }
 
         model-viewer {
-            background-image: url('./public/background.png');
-            background-size = 100% 102% ;
+            background-image : url('./public/background.png');
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-color: #eee;
             overflow-x: hidden;
-            height: 700px;
+            height: 100vh;
+            width: 100vw;
         }
 
         #ar-button {
@@ -151,6 +154,17 @@
     <div style="height: 100vh;" id="webXR">
         <model-viewer shadow-intensity="1"  environment-image="legacy" ar camera-controls
             touch-action="none" alt="A 3D model carousel" src="./public/cake1.glb" src="./public/cake2.glb" src="./public/cake3.glb">
+            <button slot="ar-button" id="ar-button">
+    View in your space
+  </button>
+
+  <div id="ar-prompt">
+    <img src="../../assets/hand.png">
+  </div>
+
+  <button id="ar-failure">
+    AR is not tracking!
+  </button>
 
             <div class="slider">
                 <div class="slides">
