@@ -150,15 +150,18 @@
 <body>
     <div style="height: 100vh;" id="webXR">
         <model-viewer shadow-intensity="1" ar ar-modes="scene-viewer webxr" environment-image="legacy" camera-controls
-            touch-action="none" alt="A 3D model carousel">
+            touch-action="none" alt="A 3D model carousel" src="./public/cake1.glb" src="./public/cake2.glb" src="./public/cake3.glb">
 
             <div class="slider">
                 <div class="slides">
-                    <button class="slide selected" onclick="switchSrc(this, 'gateau')"
-                        style="background-image: url('./public/gateau.webp');">
+                    <button class="slide selected" onclick="switchSrc(this, 'cake1')"
+                        style="background-image: url('./public/cake1.jpg');">
                     </button>
-                    <button class="slide" onclick="switchSrc(this, 'tacos')"
-                        style="background-image: url('./public/tacos.glb');">
+                    <button class="slide" onclick="switchSrc(this, 'cake2')"
+                        style="background-image: url('./public/cake2.jpg');">
+                    </button>
+                     <button class="slide selected" onclick="switchSrc(this, 'cake3')"
+                        style="background-image: url('./public/cake3.jpg');">
                     </button>
                 </div>
             </div>
@@ -170,7 +173,7 @@
         window.switchSrc = (element, name) => {
             const base = "./public/" + name;
             modelViewer.src = base + '.glb';
-            modelViewer.poster = base + '.webp';
+            modelViewer.poster = base + '.jpg';
             const slides = document.querySelectorAll(".slide");
             slides.forEach((element) => { element.classList.remove("selected"); });
             element.classList.add("selected");
